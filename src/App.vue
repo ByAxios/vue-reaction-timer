@@ -4,7 +4,7 @@
     <header>
       <div class="title">
         <div class="scorlar">
-          <h3>Eski Rekorlar</h3>
+          <h3>Old Scores</h3>
         <ul class="oldScores" v-for="scores in oldScores">
           <li>
             {{ scores }}
