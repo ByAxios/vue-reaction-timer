@@ -12,7 +12,7 @@
         </ul>
         </div>
         <h1>Reaction Timer Game</h1>
-        <button :disabled="isStarted" @click="startGame()">Tap To Play</button>
+        <button v-if="!isStarted" @click="startGame()">Tap To Play</button>
       </div>
     </header>
 
@@ -42,8 +42,6 @@ const delay = ref(null)
 const oldScores = ref([])
 const locations = ref({ top: 0, left: 0 })
 const randomDelay = () => { return 2000 + Math.random() * 2000 }
-
-
 
 
 const startGame = () => {
